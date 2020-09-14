@@ -1,0 +1,11 @@
++++++++++++++++++++
+	Errors
+++++++++++++++++++++
+
+will not present view when sql server hooked up. 
+put break point in dbcontext in Data project. 
+ 
+the target process exited with code 3221225477 while evaluating the function 'Microsoft.EntityFrameworkCore.DbCOntext.Model.get'.
+
+disable tools -> Options setting "Debugging -> General -> Enable property evalution and otherimplicit fucntion calls or debugging the 
+cause by evaluating the expression from the immediate window. 	

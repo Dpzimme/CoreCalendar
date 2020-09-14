@@ -1,0 +1,9 @@
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\bin\Debug\netstandard2.0\CalendarE2.Infrastructure.deps.json
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\bin\Debug\netstandard2.0\CalendarE2.Infrastructure.dll
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\bin\Debug\netstandard2.0\CalendarE2.Infrastructure.pdb
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.AssemblyInfo.cs
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.dll
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.pdb
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.Infrastructure\obj\Debug\netstandard2.0\CalendarE2.Infrastructure.csprojAssemblyReference.cache

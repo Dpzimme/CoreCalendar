@@ -1,0 +1,79 @@
+﻿@model CalendarE2.Domain.ViewModels.PeriodViewModel
+@using  CalendarE2.Domain.ViewModels
+<div id="periodEvents">
+    <div class="row">        
+        <div class="col-md-3 topDate"><span>Week Starting @Model.Yr.ToString() , @Model.MoStr @Model.Day</span></div>
+    </div>
+    <addUpdateEvent></addUpdateEvent>
+    <div class="calGrid">
+        <div class="gridItem gridheadercolor">--</div>
+        @foreach (string colHdr in Model.Schedule.DateHeaders)
+        { 
+            <div class="gridItem gridheadercolor">@colHdr</div>
+        }
+        @foreach (RowWithHour rwh in Model.Schedule.RowsOfHour)
+        {
+            <div class="gridItem gridtimecolor">@rwh.DisplayHour @rwh.AMPM</div>
+            @for (int i = 0; i < rwh.EventsOfHour.Count(); i++)
+            {
+                <div class="gridItem griditemcolor">                    
+                    <div class="actionField" onclick='aUEvent(this)' data-datet="@rwh.EventsOfHour[i].DateT" data-hour="@rwh.EventsOfHour[i].HourInt"><span class="fa fa-edit">@rwh.EventsOfHour[i].Title</span></div>
+                    
+                    <div>@rwh.EventsOfHour[i].Description</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<script>
+        var firstClickFlag = false;
+        function aUEvent(elem) {
+            // sets up / shows modal for add / update 
+            let dateStr = elem.getAttribute("data-datet");
+            console.log("dateStr " + dateStr);
+            console.dir(dateStr);
+            let hour = elem.getAttribute("data-hour");
+            console.log("hour " + hour + " " + typeof (hour));
+            let hourNumb = parseInt(hour, 10);       
+            firstClickFlag = true;            
+           // fill out form above so we can communicate with the backend with either a create or update
+            document.getElementById("modalYr").value = @Model.Yr;
+            document.getElementById("modalMo").value = @Model.Mo;
+            document.getElementById("modalDy").value = @Model.Day;
+            // get hour from the click event to send with form submission                                       
+            document.getElementById("modalHr").value = hourNumb;
+            if (hourNumb > 12)
+            { displayHr = hourNumb - 12; }
+            else
+            { displayHr = hourNumb; }            
+            // adjust for update mode, fill form with current values, change modal title and submit button
+            if (elem.innerHTML.length > 2) {
+                document.getElementById("modalEventTitle").value = elem.innerHTML;
+                document.getElementById("modalDescription").value = elem.parentNode.children[1].innerHTML;
+                document.getElementById("modalTitle").innerHTML = "Edit Event";
+                document.getElementById("subButton").innerHTML = "Submit Edit";
+            }
+
+            // show the Add or Updated modal based on whether the model has an event for the timeslot
+            document.getElementById("aUModal").style.display = 'block';
+        };
+
+        function endModal() {
+            console.log("in End Modal()");
+            document.getElementById("aUModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (firstClickFlag == true) {
+                // click to set up modal
+                firstClickFlag = false;
+            }
+            else {
+                if (event.target.parentNode.tagName != "FORM" && event.target.tagName != "FORM") {
+                    document.getElementById("aUModal").style.display = "none";
+                    //console.log("click outside form ");
+                }
+            }
+        }
+</script>    
