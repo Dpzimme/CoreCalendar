@@ -33,15 +33,15 @@
             let numbDays = 1;
             var fullUrl = "";
             if (timeFrame == 1) {
-                fullUrl = "http://localhost:49501/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+                fullUrl = "http://localhost:52225/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
             }
             else {
                 if (timeFrame == 2) {
-                    fullUrl = "http://localhost:49501/home/NewWeek?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+                    fullUrl = "http://localhost:52225/home/NewWeek?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
                 }
                 else {
                     console.log("Invalid TimeFrame, not 1, 2 or 3. going with day time frame");
-                    fullUrl = "http://localhost:49501/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+                    fullUrl = "http://localhost:52225/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
                 }
             };
             //$(".rightside").load(fullUrl);

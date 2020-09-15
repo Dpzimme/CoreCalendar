@@ -1,0 +1,54 @@
+﻿<div id="aUModal" class="modal" tabindex="-1">    
+        <div class="modal-dialog">
+            <div class="modal-content">
+                @using (Html.BeginForm("CreateOrUpdateEvent", "Home", FormMethod.Post))
+                {
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Update Event</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times</span>
+                        </button>
+                        </div>
+                    <div class="modal-body" >
+                        <div class="row"> 
+                        <label class="col-sm-3" for="modalEventTitle">Title</label>
+                        <input class="col-sm-3" id="modalEventTitle" required name="newTitle" placeholder="Enter Title of appointment" />
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3" for="modalDescription">Description</label>
+                            <input class="col-sm-3" id="modalDescription" required name="newDescription" placeholder="Enter description" />
+                        </div>
+                        <input id="modalYr" name="Yr" required style="display:none;" />
+                        <input id="modalMo" name="Mo" required style="display:none;" />
+                        <input id="modalDy" name="Dy" required style="display:none;" />
+                        <input id="modalTimeFrame" name="ModalTimeFrame" style="display:none;" />
+                        <input id="displayHr" required readonly="readonly" style="display:none" ; />
+                        <input id="modalHr" name="Hour" style="display:none;" />
+                        <br />                       
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Close </button>
+                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+<div id="pastEventMessage" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Please Note</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Cannot edit past events
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close </button>               
+            </div>
+        </div>
+    </div>
+</div>    

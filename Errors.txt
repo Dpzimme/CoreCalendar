@@ -9,3 +9,13 @@ the target process exited with code 3221225477 while evaluating the function 'Mi
 
 disable tools -> Options setting "Debugging -> General -> Enable property evalution and otherimplicit fucntion calls or debugging the 
 cause by evaluating the expression from the immediate window. 	
+
++++++++++++++++++++++++++
+
+Microsoft.Data.SqlClient.SNI.SSRP.GetPortByInstanceName(string browserHostName, string instanceName)
+Name or service not known System.Net.Dns.InternalGetHostByName(string hostName)
+
++++++++++++++++++
+fontawesome-webfont.woff2
+fontawesome-webfont.woff
+fontawesome-webfont.ttf
