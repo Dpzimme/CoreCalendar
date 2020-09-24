@@ -25,7 +25,7 @@ namespace CalendarE2.WebApp
             // Context Gets Connection String from appsettings.Development.json file
             // dev environment specified in Properties in launchSettings.json
             services.AddDbContext<CalendarContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(Configuration.GetConnectionString("AzureConnStr")));
             services.AddScoped<EventService>();
             services.AddMvc();
         }
