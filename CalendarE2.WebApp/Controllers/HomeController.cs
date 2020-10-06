@@ -3,6 +3,7 @@ using CalendarE2.Data.Services;
 using CalendarE2.Domain;
 using CalendarE2.Domain.ViewModels;
 using CalendarE2.WebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -25,6 +26,7 @@ namespace WebApp.Controllers
             this.eventService = _eventService;
         }
 
+        [AllowAnonymous]
         public IActionResult Index(int? theYr, int? theMo, int? theDay, string timeFrameStr)
         {
             DateTime theDayDT;
@@ -41,6 +43,7 @@ namespace WebApp.Controllers
             StartDayViewModel startDayViewModel = new StartDayViewModel(theDayDT, timeFrameStr);
             return View(startDayViewModel);
         }
+
         public IActionResult NewDay(int theYr, int theMo, int theDay)
         {
             DateTime theDayDT = new DateTime(theYr, theMo, theDay);

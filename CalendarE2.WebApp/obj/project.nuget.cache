@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GYlv4XsYkxpqDvvJ+0QAL5+6Ax2yYU8+SKyvADQps6qwVuhSAGbjWBU/1WBQvPG5tkTOSLRyIc1cRSpGQubwtg==",
+  "dgSpecHash": "5552vq9WksUpLs46+HCpmxcO3LgYnibaifS8i7jnX3Mcg4nOfz98DshOp3qjbDnK+oCxmj8efwSb7eOU6klxMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\danzi\\source\\repos\\Folders\\mvcWebApi\\CalendarE2\\CalendarE2.WebApp\\CalendarE2.WebApp.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\danzi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\danzi\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\danzi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\danzi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "C:\\Users\\danzi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\danzi\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\danzi\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

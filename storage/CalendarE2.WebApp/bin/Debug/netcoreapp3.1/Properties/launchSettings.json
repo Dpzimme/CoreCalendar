@@ -2,8 +2,12 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/CalendarE2.WebApp",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:49501",
+      "applicationUrl": "http://localhost:52225",
       "sslPort": 0
     }
   },
@@ -22,12 +26,6 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:5000"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
     }
   }
 }

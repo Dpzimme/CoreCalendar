@@ -1,3 +1,5 @@
+using System;
+
 namespace CalendarE2.WebApp.Models
 {
     public class ErrorViewModel
