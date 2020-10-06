@@ -43,7 +43,7 @@
             else {
                 if (timeFrame == 2) {
                     //fullUrl = "http://localhost:52225/home/NewWeek?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
-                    fullUrl = baseUrl + newYr + "&theMo=" + newMo + "&theDay=" + newDay; 
+                    fullUrl = baseUrlWeek + newYr + "&theMo=" + newMo + "&theDay=" + newDay; 
                 }
                 else {
                     console.log("Invalid TimeFrame, not 1, 2 or 3. going with day time frame");
