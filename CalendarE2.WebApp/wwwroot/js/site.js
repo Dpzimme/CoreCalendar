@@ -32,22 +32,19 @@
             let timeFrame = dayTFElem.checked ? 1 : 2;
             let numbDays = 1;
             var fullUrl = "";
-            // let baseUrlDay = "http://localhost:52225/home/NewDay?theYr=";
-            //let baseUrlWeek = "http://localhost:52225/home/NewWeek?theYr=";
-            let baseUrlDay = "https://ftpcalendare2.azurewebsites.net/home/NewDay?theYr=";
-            let baseUrlWeek = "https://ftpcalendare2.azurewebsites.net//home/NewWeek?theYr=";
-            if (timeFrame == 1) {
-                //fullUrl = "http://localhost:52225/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+            let baseUrlDay = "http://localhost:52225/home/NewDay?theYr=";
+            let baseUrlWeek = "http://localhost:52225/home/NewWeek?theYr=";
+            //let baseUrlDay = "https://ftpcalendare2.azurewebsites.net/home/NewDay?theYr=";
+            //let baseUrlWeek = "https://ftpcalendare2.azurewebsites.net//home/NewWeek?theYr=";
+            if (timeFrame == 1) {               
                 fullUrl = baseUrlDay + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
             }
             else {
-                if (timeFrame == 2) {
-                    //fullUrl = "http://localhost:52225/home/NewWeek?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+                if (timeFrame == 2) {                  
                     fullUrl = baseUrlWeek + newYr + "&theMo=" + newMo + "&theDay=" + newDay; 
                 }
                 else {
-                    console.log("Invalid TimeFrame, not 1, 2 or 3. going with day time frame");
-                    //fullUrl = "http://localhost:52225/home/NewDay?theYr=" + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
+                    console.log("Invalid TimeFrame, not 1, 2 or 3. going with day time frame");                   
                     fullUrl = baseUrlDay + newYr + "&theMo=" + newMo + "&theDay=" + newDay;
                 }
             };

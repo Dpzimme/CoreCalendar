@@ -2,48 +2,41 @@
 @using  CalendarE2.Domain.ViewModels
 <script src="~/js/addUpdateEventBase.js"></script>
 
-    <div id="periodEvents">
+<div id="periodEvents">
         <div class="row">
             <div class="col-md-3 topDate"><span>@Model.Yr.ToString(), @Model.MoStr @Model.Day</span></div>
         </div>
         @await Component.InvokeAsync("AddUpdateModal")
-        
+    <div class="container pull-left dayAreaColor dayAreaShape" style="width:100%">
         @foreach (RowWithHour rwh in Model.Schedule.RowsOfHour)
         {
-            <div class="row eventRow">
-                <span>@rwh.DisplayHour.ToString() @rwh.AMPM</span>
-                @{
-                    <div>
-                        <span class="oneSpace"></span>
-                        <span class="timeslot actionField" onclick='aUEventDay(this)' data-datet="@rwh.EventsOfHour[0].DateT" data-hour="@rwh.EventsOfHour[0].HourInt"><span class="fa fa-edit"></span></span>
-                        <span class="timeslot">@rwh.EventsOfHour[0].Title</span>
-                        <span class="col-timeslot">@rwh.EventsOfHour[0].Description</span>
-                    </div>
-                }
-            </div>
-        }
+        <div class="row focusField dayRowItem">
+            <div style="width:1em;"> </div>
+            <div class="timecolcolor" style="width:3em;">@rwh.DisplayHour.ToString() @rwh.AMPM</div>
+            <div style="width:1em;"> </div>
+            <div class="actionField" onclick='aUEventDay(this)' data-datet="@rwh.EventsOfHour[0].DateT" data-hour="@rwh.EventsOfHour[0].HourInt"><span class="fa fa-edit"></span></div>
+            <div style="width:1em"> </div>
+            <div class="col-3 titleEmphasis"> @rwh.EventsOfHour[0].Title </div>
+            <div style="width:1em" >  </div>
+            <div class="col-6"> @rwh.EventsOfHour[0].Description </div>
+        </div>
+        }           
     </div>
+</div>
 
-    <script>
-
-        @*function packFormDay(subjectDate) {
-            // fill out form above so we can communicate with the backend with either a create or update
-            document.getElementById("modalYr").value = subjectDate.getFullYear();
-            document.getElementById("modalMo").value = subjectDate.getMonth();
-            document.getElementById("modalDy").value = subjectDate.getDate();
-            document.getElementById("modalTimeFrame").value = @Model.TimeFrame;           
-        };*@
-
+    <script>     
         function checkUpdateDay (elem) {
-            // Check if there is already an entry for the chosen timeslot. If so, then an update.
+            // Add or Update appointment / event. To determine, check if there is already an entry for the chosen timeslot. If so, then an update, otherwise an add.
             if (elem.parentNode.children[3].innerHTML.length > 0) {
-                document.getElementById("modalEventTitle").value = elem.parentNode.children[2].innerHTML;
-                document.getElementById("modalDescription").value = elem.parentNode.children[3].innerHTML;
+                document.getElementById("modalEventTitle").value = elem.parentNode.children[5].innerHTML;
+                document.getElementById("modalDescription").value = elem.parentNode.children[7].innerHTML;               
             }
         }
 
         function aUEventDay(elem) {
-            // aUEvent in a file in the js directory, used in week functionality as well. Could be used in Monthly functionality, if added.
+            // The Day version of launching the Add or Update Modal. There is a Weekly version in the Week View Component and, you could imagine,
+            // a Monthly version. In other words, there is a generic function, aUEvent, that takes a specific case function called checkUpdate<day or week>
+            // to run the Add or Update Modal. Strategy Design Pattern.    
             aUEvent(elem, packForm, checkUpdateDay);
         }        
     </script>    

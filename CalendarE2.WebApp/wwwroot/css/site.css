@@ -14,7 +14,7 @@ for details on configuring this project to bundle and minify static web assets. 
     font-style:italic;
 }
 .flex-container {
-    position: absolute;
+    position: static;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -26,7 +26,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .leftside {
     width: 18%;
     height: 100%;
-    margin: 4px;
+    margin: auto;
     /* background-color: #e5e5e5; */
 }
 
@@ -47,7 +47,7 @@ div.ui-datepicker {
     margin: 4px;
 }
 
-.calGrid {
+.weekGrid {
     display: grid;   
     grid-template-columns: 4em  repeat(7, minmax(8em, 1fr));
     background-color:#8fbdb6;
@@ -55,11 +55,39 @@ div.ui-datepicker {
     border-radius: 7px;
 }
 
-.gridItem {    
+.dayAreaShape {
+    padding: 5px;
+    border-radius: 7px;
+}
+.dayAreaColor {
+    background-color: #8fbdb6;   
+}
+
+.dayGrid {
+    display: grid;
+    grid-template-columns: 10em 7em 20% auto;
+    background-color: #8fbdb6;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.weekGridItem {    
     border: 1px solid #fff;    
     font-size: .9em;    
 }
+.timeGridItem {
+    border: 1px solid #fff;   
+}
+.dayRowItem {
+    border-bottom: 1px solid #fff;   
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
 
+.titleEmphasis {
+    font-size:1.1em;
+    font-style:italic;
+}
 .gridheadercolor {
     background-color: gainsboro
 }
@@ -68,6 +96,9 @@ div.ui-datepicker {
 }
 
 .gridtimecolor {
+    background-color: #e0a3a3;
+}
+.timecolcolor {
     background-color: #e0a3a3;
 }
 .timeslot {  
@@ -91,10 +122,23 @@ div.ui-datepicker {
     .actionField:active {
         background-color: red;
     }
-
-.eventRow {     
+.focusField:hover {
+    background-color: gold;
+}
+.underLined {     
     border-bottom: groove;
 }
+
+/* Tooltip container */
+.hide {
+    display:none;
+}
+
+.myDIV:hover + .hide {
+    display: block;
+    color: black;
+}   
+
 .glyphicon {
     display: block;
 }

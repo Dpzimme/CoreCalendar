@@ -90,3 +90,6 @@ C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\obj\D
 C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\WeekOfInterest\Default.cshtml.g.cs
 C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\bin\Debug\netcoreapp3.1\appsettings.production.json
 C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\bin\Debug\netcoreapp3.1\web.config
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\obj\Debug\netcoreapp3.1\CalendarE2.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\danzi\source\repos\Folders\mvcWebApi\CalendarE2\CalendarE2.WebApp\obj\Debug\netcoreapp3.1\CalendarE2.WebApp.MvcApplicationPartsAssemblyInfo.cache
